@@ -10,7 +10,7 @@ class ApisController < ApplicationController
 
 
   def check_signature?(timestamp,signature,nonce)
-    token = "weixintoken11992001"
+    token = "weixintokentest1988"
     array = [token,timestamp, nonce]
     array = array.sort
     tmpsign = Digest::SHA1.hexdigest(array.join)
