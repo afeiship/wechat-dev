@@ -14,10 +14,6 @@ class ApisController < ApplicationController
     array = [token,timestamp, nonce]
     array = array.sort
     tmpsign = Digest::SHA1.hexdigest(array.join)
-    if tmpsign == signature
-      true
-    else
-      false
-    end
+    return tmpsign == signature
   end
 end
