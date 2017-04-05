@@ -7,20 +7,9 @@ sudo rails s -p 80
 rails s -e production -p 80
 # RAILS_ENV=production rails s
 ## visite: http://wechat-dev.com/apis/notify
+## GET "/apis/notify?signature=b27929f0a22280cd9844414284b2e23b27b8f92d&echostr=2653441542986202611&timestamp=1491399873&nonce=1094555034"
 ```
 
-## deploy to heroku:
-```bash
-## login:
-heroku keys:add
-
-#create project:
-cd .../wechat-dev
-heroku create
-
-# push to heroku:
-git push heroku master
-```
 
 ## resources:
 + http://blog.csdn.net/lissdy/article/details/41849793
