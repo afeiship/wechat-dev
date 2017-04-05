@@ -5,6 +5,7 @@
 ```bash
 sudo rails s -p 80
 rails s -e production -p 80
+# RAILS_ENV=production rails s
 ## visite: http://wechat-dev.com/apis/notify
 ```
 
