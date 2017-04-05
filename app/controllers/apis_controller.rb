@@ -1,16 +1,22 @@
 class ApisController < ApplicationController
-  @@token="weixintokentest1988"
+  # @@token="weixintokentest1988"
 
   def notify
-    # render plain: params.inspect
-    if check_signature?(params[:signature],params[:timestamp],params[:nonce])
-     render plain: params[:echostr]
+    if check_signature?(params["timestamp"],params["signature"],params["nonce"])
+        render :text => params["echostr"]
     end
   end
 
 
-  private
-    def check_signature?(signature,timestamp,nonce)  
-      Digest::SHA1.hexdigest([timestamp,nonce,@@token].sort.join) == signature  
+  def check_signature?(timestamp,signature,nonce)
+    token = "weixintokentest1988"
+    array = [token,timestamp, nonce]
+    array = array.sort
+    tmpsign = Digest::SHA1.hexdigest(array.join)
+    if tmpsign == signature
+      true
+    else
+      false
     end
+  end
 end
