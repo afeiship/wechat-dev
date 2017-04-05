@@ -2,7 +2,7 @@ class ApisController < ApplicationController
   # @@token="weixintokentest1988"
 
   def notify
-    p params.inspect
+    # p params.inspect
     if check_signature?(params["timestamp"],params["signature"],params["nonce"])
       render plain: params['echostr']
     end
@@ -10,7 +10,7 @@ class ApisController < ApplicationController
 
 
   def check_signature?(timestamp,signature,nonce)
-    token = "wechat"
+    token = "weixintoken11992001"
     array = [token,timestamp, nonce]
     array = array.sort
     tmpsign = Digest::SHA1.hexdigest(array.join)

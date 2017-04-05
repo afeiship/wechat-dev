@@ -17,6 +17,12 @@ ps aux | grep puma
 ## GET "/apis/notify?signature=b27929f0a22280cd9844414284b2e23b27b8f92d&echostr=2653441542986202611&timestamp=1491399873&nonce=1094555034"
 ```
 
+## test notify:
+```bash
+http://feiwx.api-check.com/apis/notify
+```
+
+
 ## php version:
 ```php
 //获得接口认证
