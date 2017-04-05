@@ -4,9 +4,7 @@ class ApisController < ApplicationController
   def notify
     # render plain: params.inspect
     # p params.inspect
-    if check_signature?(params[:signature],params[:timestamp],params[:nonce])
-     return render plain: params[:echostr]
-    end
+    check_signature?
   end
 
 
