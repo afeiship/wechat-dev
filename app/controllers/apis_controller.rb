@@ -3,7 +3,7 @@ class ApisController < ApplicationController
 
   def notify
     if check_signature?(params["timestamp"],params["signature"],params["nonce"])
-        render :text => params["echostr"]
+      render plain: params.echostr
     end
   end
 

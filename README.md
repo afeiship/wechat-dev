@@ -9,6 +9,8 @@ rails s -e production -p 80
 ## dev:
 rails server -e development -b 0.0.0.0 -p 80
 
+# kill 
+ps aux | grep puma
 
 # RAILS_ENV=production rails s
 ## visite: http://wechat-dev.com/apis/notify
