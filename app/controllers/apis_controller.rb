@@ -2,6 +2,8 @@ class ApisController < ApplicationController
   @@token="weixintokentest1988"
 
   def notify
+
+    render plain: params.inspect
     if check_signature?(params[:signature],params[:timestamp],params[:nonce])
      return render text: params[:echostr]
     end
