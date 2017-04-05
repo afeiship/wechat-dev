@@ -1,24 +1,11 @@
-# README
+# wechat-dev
+> 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## run:
+```bash
+sudo rails s -p 80
+## visite: http://wechat-dev.com/apis/notify
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## resources:
++ http://blog.csdn.net/lissdy/article/details/41849793
