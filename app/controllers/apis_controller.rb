@@ -2,6 +2,7 @@ class ApisController < ApplicationController
   # @@token="weixintokentest1988"
 
   def notify
+    p params.inspect
     if check_signature?(params["timestamp"],params["signature"],params["nonce"])
       render plain: params['echostr']
     end
