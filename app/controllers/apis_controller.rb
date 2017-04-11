@@ -2,6 +2,7 @@ class ApisController < ApplicationController
   # @@token="weixintokentest1988"
 
   def notify
+    return render plain: params['echostr']
     if check_signature?(params["timestamp"],params["signature"],params["nonce"])
       render plain: params['echostr']
       # render '/apis/notify.text.erb', layout: false, content_type: 'text/plain'
